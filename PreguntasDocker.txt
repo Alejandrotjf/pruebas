@@ -1,0 +1,29 @@
+Pregunta 1
+
+Ocupe 3 contenedores ya que 1 serán para la parte del frontend y el otro será para la parte del backend porque cada uno tiene un propósito en especifico y con el ambiente distinto en el que trabajan y para asegurar la conexión en Docker
+
+Pregunta 2
+
+node:18 (para frontend y backend)
+Se usa para construir tanto la aplicación Angular (frontend) como la API NestJS (backend).
+Incluye Node.js y npm, necesarios para instalar dependencias y compilar código TypeScript.
+nginx:alpine (para servir el frontend)
+
+Después de compilar Angular, se usa Nginx como servidor web para distribuir los archivos estáticos.
+postgres:15 (para la base de datos)
+
+Se usa la imagen oficial de PostgreSQL para almacenar datos de usuarios, pedidos y menús.
+Cada imagen fue seleccionada por su compatibilidad con los componentes
+
+Pregunta 3
+
+Frontend (80) y Backend (3000) sí deben exponerse, ya que son accesibles desde fuera del entorno Docker.
+Base de datos (5432) no necesita ser accesible externamente
+
+Pregunta 4
+
+La base de datos si necesita volumen porque al reiniciarse  se perderan los datos y el back y front no necesitan ya que se construyen desde el código fuente
+
+
+
+
